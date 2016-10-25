@@ -2,11 +2,12 @@
 <mavlink>
     <include>common.xml</include>
     <include>ardupilotmega.xml</include>
+
     <version>3</version>
     <!--Version 4.0 -->
     <!-- MESSAGE IDs 180 - 240: Space for custom messages in individual projectname_messages.xml files -->
     <messages>
-        <message id="180" name="EULER_DEBUG">
+        <message id="280" name="EULER_DEBUG">
             <description>Attitude data from the IMU EKF and the wind tunnel gimbal.</description>
             <field type="uint32_t" name="time_boot_ms">Time since boot in msec</field>
             <field type="float" name="IMU_roll">IMU roll in deg</field>
@@ -16,7 +17,7 @@
             <field type="float" name="GBL_pitch">Gimbal pitch in deg</field>
             <field type="float" name="GBL_yaw">Gimbal yaw in deg</field>
         </message>
-        <message id="181" name="AIRDATA">
+        <message id="281" name="AIRDATA">
             <description>Data from the airdata sensors.</description>
             <field type="uint32_t" name="time_boot_ms">Time since boot in msec</field>
             <field type="float" name="pressure_alt">Altitude above ground in m</field>
@@ -24,7 +25,7 @@
             <field type="float" name="aoa">Angle of attack in deg</field>
             <field type="float" name="sideslip">Sideslip in deg</field>
         </message>
-        <message id="182" name="AIRDATA_DEBUG">
+        <message id="282" name="AIRDATA_DEBUG">
             <description>Data from the airdata sensors.</description>
             <field type="uint32_t" name="time_boot_ms">Time since boot in msec</field>
             <field type="uint16_t" name="dynamic_pressure">Dynamic pressure in Pa</field>
@@ -34,7 +35,7 @@
             <field type="float" name="DP2">Differential Pressure 2</field>
             <field type="float" name="DP3">Differential Pressure 3</field>
         </message>
-        <message id="183" name="CONTROL_FEEDBACK">
+        <message id="283" name="CONTROL_FEEDBACK">
             <description>Data from the control feedback sensors.</description>
             <field type="uint32_t" name="time_boot_ms">Time since boot in msec</field>
             <field type="float" name="elevator">Elevator angle in deg</field>
@@ -44,7 +45,7 @@
             <field type="float" name="ctrl_aux_2">Aux channel 2 in deg</field>
             <field type="float" name="ctrl_aux_3">Aux channel 3 in deg</field>
         </message>
-        <message id="184" name="PROPULSION">
+        <message id="284" name="PROPULSION">
             <description>Data from the motor sensors.</description>
             <field type="uint32_t" name="time_boot_ms">Time since boot in msec</field>
             <field type="float" name="motor_volt">Motor Volts</field>
@@ -55,7 +56,7 @@
             <field type="uint16_t" name="motor_thrust">Thrust from loadcell</field>
             <field type="uint16_t" name="motor_torque">Torque from loadcell</field>
         </message>
-        <message id="185" name="POWER">
+        <message id="285" name="POWER">
             <description>Data from onboard power systems</description>
             <field type="uint32_t" name="time_boot_ms">Time since boot in msec</field>
             <field type="float" name="Avionics_Volt">FDR Batt Volts</field>
@@ -68,7 +69,7 @@
             <field type="uint8_t" name="Main_Batt">Main Batt capacity remaining</field>
             <field type="float" name="Shunt_temp">Shunt temp in deg C</field>
         </message>
-        <message id="186" name="SERVO_NODE">
+        <message id="286" name="SERVO_NODE">
             <description>Servo relay status.</description>
             <field type="uint32_t" name="time_boot_ms">Time since boot in msec</field>
             <field type="int8_t" name="relay_ch_1">Relay status channel 1 (on/off)</field>
@@ -80,7 +81,7 @@
             <field type="uint8_t" name="RC_ch9">RC signal for override switch</field>
             <field type="uint8_t" name="Override_SW">Override switch feedback</field>
         </message>
-        <message id="187" name="IMU_DEBUG">
+        <message id="287" name="IMU_DEBUG">
             <description>IMU readings for the usual 9DOF sensor setup</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="int16_t" name="Ax">X acceleration (mg)</field>
@@ -94,7 +95,7 @@
             <field type="int16_t" name="Mz">Z Magnetic field (Mz*1000)</field>
             <field type="int8_t" name="IMU_temp">IMU Temp</field>
         </message>
-        <message id="188" name="ACCEL_DEBUG">
+        <message id="288" name="ACCEL_DEBUG">
             <description>Accelerometers</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="int16_t" name="imu_ax">X acceleration (mg)</field>
@@ -110,7 +111,7 @@
             <field type="int16_t" name="aird_ay">Y acceleration (mg)</field>
             <field type="int16_t" name="aird_az">Z acceleration (mg)</field>
         </message>
-        <message id="189" name="MAG_DEBUG">
+        <message id="289" name="MAG_DEBUG">
             <description>Magnetometers</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="int16_t" name="imu_mx">X Magnetic field (Mx*1000)</field>
@@ -123,7 +124,7 @@
             <field type="int16_t" name="wing_my">Y Magnetic field (Mz*1000)</field>
             <field type="int16_t" name="wing_mz">Z Magnetic field (Mz*1000)</field>
         </message>
-        <message id="190" name="FDR_STATUS">
+        <message id="290" name="FDR_STATUS">
             <description>Status of FDR and Sensors</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="uint8_t" name="GPS_SAT">Satnum</field>
@@ -137,7 +138,7 @@
             <field type="uint8_t" name="PWR_Gains">Binary gains feedback</field>
             <field type="uint8_t" name="CPU_load">CPU load</field>
         </message>
-        <message id="191" name="Longitudinal">
+        <message id="291" name="Longitudinal">
             <description>Status of FDR and Sensors</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="float" name="AoA">Angle of attack</field>
@@ -149,7 +150,7 @@
             <field type="float" name="elevator">elevator fdbk</field>
             <field type="float" name="elevator_cmd">Elevator command</field>
         </message>
-        <message id="192" name="Lateral">
+        <message id="292" name="Lateral">
             <description>Status of FDR and Sensors</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="float" name="Beta">Sideslip</field>
@@ -165,7 +166,7 @@
             <field type="float" name="Rudder_cmd">Rudder command</field>
             <field type="float" name="Aileron_cmd">Aileron command</field>
         </message>
-        <message id="193" name="WEATHER">
+        <message id="293" name="WEATHER">
             <description>Weather station data</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="float" name="Wind_speed">Wind speed in m/s</field>
@@ -175,7 +176,7 @@
             <field type="float" name="Density">Ground air density in kg/m3</field>
             <field type="uint8_t" name="Beaufort">Wind in Beaufort scale</field>
         </message>
-        <message id="194" name="SPEKTRUM_LINK">
+        <message id="294" name="SPEKTRUM_LINK">
             <description>Status of FDR and Sensors</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="uint8_t" name="Holds">Number of failsave events</field>
@@ -185,7 +186,7 @@
             <field type="uint16_t" name="Fade_sat_2">Sat 2 link loss</field>
             <field type="uint16_t" name="Fade_sat_3">Sat 3 link loss</field>
         </message>
-        <message id="195" name="FUEL_CELL">
+        <message id="295" name="FUEL_CELL">
             <description>Status of FDR and Sensors</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="uint16_t" name="FC_Volt">Fuel cell voltage</field>
@@ -194,7 +195,7 @@
             <field type="uint16_t" name="FC_Aux_V1">Aux1 voltage</field>
             <field type="uint16_t" name="FC_Aux_A1">Aux1 current</field>
         </message>
-        <message id="196" name="FUEL_CELL_DETAIL">
+        <message id="296" name="FUEL_CELL_DETAIL">
             <description>Status of FDR and Sensors</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="uint16_t" name="FC_Aux_V2">Aux2 voltage</field>
@@ -207,7 +208,7 @@
             <field type="uint16_t" name="FC_RPM_1">Fuel cell temperature</field>
             <field type="uint16_t" name="FC_RPM_2">Aux voltage</field>
         </message>
-        <message id="197" name="PID_TUNE">
+        <message id="297" name="PID_TUNE">
             <description>PID Controller data for tuning</description>
             <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
             <field type="float" name="Cmd_In">Input command</field>
